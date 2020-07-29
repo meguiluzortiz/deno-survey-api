@@ -1,0 +1,11 @@
+scripts:
+  start:dev:
+    cmd: "deno run --allow-net --allow-write --allow-read --allow-env --allow-plugin --unstable src/server.ts"
+    desc: "Run the app in dev mode"
+  start:debug:
+    cmd: "deno run --allow-net --allow-write --allow-read --allow-plugin --unstable src/server.ts"
+    desc: "Run the app in debug mode"
+    inspectBrk: "0.0.0.0:9229"
+  start:docker:
+    cmd: "docker-compose up"
+    desc: "Run the app with docker in dev mode"
